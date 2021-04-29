@@ -8,8 +8,10 @@ app = Flask(__name__)
 @app.route("/add")
 def do_add():
     """Add a and b."""
+
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
+
     result = add(a, b)
     return str(result)
 
@@ -17,6 +19,7 @@ def do_add():
 @app.route("/sub")
 def do_sub():
     """Substract b from a."""
+
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
 
